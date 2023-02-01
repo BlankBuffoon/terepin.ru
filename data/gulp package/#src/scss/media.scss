@@ -1,0 +1,139 @@
+@media (max-width: 900px) {
+    .navBar ul li:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    .navBar ul li:hover a {
+        &[data-scroll=intro] {
+            & span::after {
+                animation: sectionVisibility--open .5s;
+                content: '';
+            }
+        }
+        &[data-scroll=about] {
+            & span::after {
+                animation: sectionVisibility--open .5s;
+                content: '';
+            }
+        }
+        &[data-scroll=skills] {
+            & span::after {
+                animation: sectionVisibility--open .5s;
+                content: '';
+            }
+        }
+        &[data-scroll=portfolio] {
+            & span::after {
+                animation: sectionVisibility--open .5s;
+                content: '';
+            }
+        }
+        &[data-scroll=contacts] {
+            & span::after {
+                animation: sectionVisibility--open .5s;
+                content: '';
+            }
+        }
+    }
+    .navBar ul li>a>span::before {
+        width: 10px;
+        height: 10px;
+    }
+    h2 {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+    p,
+    span {
+        font-size: 14px;
+    }
+    .intro h1 {
+        font-size: 64px;
+        margin-bottom: 6px;
+    }
+    .about {
+        &__photo {
+            width: 180px;
+            height: 180px;
+        }
+    }
+    .skills__category {
+        flex-direction: column;
+        //width: 75%;
+        li>span,
+        p {
+            text-align: left;
+        }
+    }
+    .contacts {
+        ul>li>a>p {
+            font-size: 14px;
+        }
+    }
+    .slider__scroll {
+        & span {
+            font-size: 16px;
+        }
+    }
+    .slider__control::before {
+        width: 18px;
+        height: 18px;
+    }
+
+    .slider__item:first-child {
+        padding: 0 25px;
+    }
+
+    .slider__item:not(:first-child) {
+        h2 {
+            font-size: 22px;
+        }
+
+        .wrapper {
+            flex-direction: column;
+            padding: 0;
+            margin-bottom: 20px;
+
+            .left {
+                width: 60%;
+
+                img {
+                    margin-right: 0;
+                    margin-bottom: 18px;
+                }
+            }
+
+            .right {
+                width: 65%;
+
+                .description {
+                    span {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    a {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .link {
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .intro h1 {
+        width: 80%;
+        text-align: center;
+        line-height: 70px;
+        margin-bottom: 12px;
+    }
+}

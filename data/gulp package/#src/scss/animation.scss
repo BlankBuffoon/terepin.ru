@@ -1,0 +1,21 @@
+.moreButton {
+  animation: itemOpacity 5s infinite;
+}
+
+.intro h1 {
+  animation: itemOpacity 5s infinite;
+}
+
+@keyframes itemOpacity {
+  0%  {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,465 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Shippori Antique", sans-serif;
+}
+
+body,
+html {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+p,
+span {
+  font-size: 24px;
+  text-align: center;
+}
+
+.block {
+  min-height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.block.white {
+  background: white;
+  color: black;
+}
+
+.block.black {
+  background: black;
+  color: white;
+}
+
+.intro h1 {
+  font-size: 128px;
+  margin-bottom: 12px;
+}
+
+.intro button {
+  border: 2px solid white;
+  background: none;
+  padding: 5px 20px;
+  color: white;
+  font-size: 16px;
+}
+
+.about p {
+  max-width: 80%;
+}
+
+.about__photo {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: 0px 20px 34px 10px rgba(34, 60, 80, 0.14);
+  margin-bottom: 14px;
+}
+
+.about__photo img {
+  transform: scale(140%);
+  position: absolute;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.skills__category {
+  width: 65%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.skills__category li {
+  margin-bottom: 20px;
+}
+
+.skills__category span {
+  text-align: left;
+  margin-bottom: 20px;
+  border-bottom: 3px solid white;
+}
+
+.skills__category p {
+  text-align: left;
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.contacts h2 {
+  margin-bottom: 12px;
+}
+
+.contacts ul {
+  list-style-type: none;
+}
+
+.contacts ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.contacts ul li a p {
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.contacts ul li a .svg-message-dims,
+.contacts ul li a .svg-telegram-dims {
+  width: 22px;
+  height: 22px;
+}
+
+.nav-bar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  top: 0;
+  left: 5px;
+  z-index: 100;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+}
+
+.nav-bar ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.nav-bar ul li > a {
+  text-decoration: none;
+}
+
+.nav-bar ul li > a > span {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.nav-bar ul li > a > span::before {
+  margin-right: 5px;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+
+.nav-bar.white ul li > a > span::before {
+  border-color: white;
+}
+
+.nav-bar.white ul li > a > span::after {
+  color: white;
+}
+
+.nav-bar.black ul li > a > span::before {
+  border-color: black;
+}
+
+.nav-bar.black ul li > a > span::after {
+  color: black;
+}
+
+.nav-bar.black ul li > a.active > span::before {
+  background: black;
+}
+
+.nav-bar.white ul li > a.active > span::before {
+  background: white;
+}
+
+.nav-bar ul li > a > span::after {
+  display: none;
+  opacity: 0;
+}
+
+.nav-bar ul li:hover a[data-scroll=intro] span::after {
+  -webkit-animation: sectionVisibility--open 0.5s;
+          animation: sectionVisibility--open 0.5s;
+  content: "Home";
+}
+
+.nav-bar ul li:hover a[data-scroll=about] span::after {
+  -webkit-animation: sectionVisibility--open 0.5s;
+          animation: sectionVisibility--open 0.5s;
+  content: "About";
+}
+
+.nav-bar ul li:hover a[data-scroll=skills] span::after {
+  -webkit-animation: sectionVisibility--open 0.5s;
+          animation: sectionVisibility--open 0.5s;
+  content: "Skills";
+}
+
+.nav-bar ul li:hover a[data-scroll=portfolio] span::after {
+  -webkit-animation: sectionVisibility--open 0.5s;
+          animation: sectionVisibility--open 0.5s;
+  content: "Portfolio";
+}
+
+.nav-bar ul li:hover a[data-scroll=contacts] span::after {
+  -webkit-animation: sectionVisibility--open 0.5s;
+          animation: sectionVisibility--open 0.5s;
+  content: "Contacts";
+}
+
+.nav-bar ul li > a > span::before,
+span::after {
+  transition: color 0.5s, border-color 0.5s, background 0.5s, opacity 1s;
+}
+
+@-webkit-keyframes sectionVisibility--open {
+  from {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes sectionVisibility--open {
+  from {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes sectionVisibility--close {
+  from {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes sectionVisibility--close {
+  from {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.moreButton {
+  -webkit-animation: itemOpacity 5s infinite;
+          animation: itemOpacity 5s infinite;
+}
+
+.intro h1 {
+  -webkit-animation: itemOpacity 5s infinite;
+          animation: itemOpacity 5s infinite;
+}
+
+@-webkit-keyframes itemOpacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes itemOpacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.slider {
+  min-width: 100%;
+}
+
+.slider__scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+}
+
+.slider__arrow {
+  width: 16px;
+  height: 16px;
+}
+
+.slider__arrow:first-child {
+  transform: rotate(180deg);
+}
+
+.slider__item {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.slider__item:nth-child(1) h2 {
+  margin-bottom: 2px;
+}
+
+.slider__item:nth-child(1) span {
+  font-size: 16px;
+  margin: 0 20px 0 20px;
+}
+
+.slider__item:nth-child(2) {
+  background: gray;
+}
+
+.slider__item:nth-child(3) {
+  background: gray;
+}
+
+.slider__item:nth-child(4) {
+  background: gray;
+}
+
+@media (max-width: 900px) {
+  .navBar ul li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .navBar ul li:hover a[data-scroll=intro] span::after {
+    -webkit-animation: sectionVisibility--open 0.5s;
+            animation: sectionVisibility--open 0.5s;
+    content: "";
+  }
+
+  .navBar ul li:hover a[data-scroll=about] span::after {
+    -webkit-animation: sectionVisibility--open 0.5s;
+            animation: sectionVisibility--open 0.5s;
+    content: "";
+  }
+
+  .navBar ul li:hover a[data-scroll=skills] span::after {
+    -webkit-animation: sectionVisibility--open 0.5s;
+            animation: sectionVisibility--open 0.5s;
+    content: "";
+  }
+
+  .navBar ul li:hover a[data-scroll=portfolio] span::after {
+    -webkit-animation: sectionVisibility--open 0.5s;
+            animation: sectionVisibility--open 0.5s;
+    content: "";
+  }
+
+  .navBar ul li:hover a[data-scroll=contacts] span::after {
+    -webkit-animation: sectionVisibility--open 0.5s;
+            animation: sectionVisibility--open 0.5s;
+    content: "";
+  }
+
+  .navBar ul li > a > span::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  p,
+  span {
+    font-size: 14px;
+  }
+
+  .intro h1 {
+    font-size: 64px;
+    margin-bottom: 6px;
+  }
+
+  .about__photo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .skills__category {
+    flex-direction: column;
+  }
+
+  .skills__category li > span,
+  .skills__category p {
+    text-align: left;
+  }
+
+  .contacts ul > li > a > p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 425px) {
+  .intro h1 {
+    width: 80%;
+    text-align: center;
+    line-height: 70px;
+    margin-bottom: 12px;
+  }
+}

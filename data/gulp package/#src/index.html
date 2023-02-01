@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', { "title":"Alex Terepin" })
+
+<body>
+    @@include('html/header.html', {})
+    <main>
+        <nav id="nav-bar" class="nav-bar">
+            <ul>
+                <li>
+                    <a class="nav-bar__link" data-scroll="intro" href="#intro"><span></span></a>
+                </li>
+                <li>
+                    <a class="nav-bar__link" data-scroll="about" href="#about"><span></span></a>
+                </li>
+                <li>
+                    <a class="nav-bar__link" data-scroll="skills" href="#skills"><span></span></a>
+                </li>
+                <li>
+                    <a class="nav-bar__link" data-scroll="portfolio" href="#portfolio"><span></span></a>
+                </li>
+                <li>
+                    <a class="nav-bar__link" data-scroll="contacts" href="#contacts"><span></span></a>
+                </li>
+            </ul>
+            <div class="testblock"></div>
+        </nav>
+
+        <a name="intro"></a>
+        <section id="intro" class="block intro black">
+            <h1>Hi World!</h1>
+            <button class="moreButton">Wake up, Neo</button>
+        </section>
+
+        <a name="about"></a>
+        <section id="about" class="block about white">
+            <div class="about__photo"><img src="img/blankbuffoon_moscow.jpg" alt="It's me ;)"></div>
+            <h2>About me.</h2>
+            <p>Hi! My name is Alex. I am a frontend developer.</p>
+            <p>My specialization is the layout of websites and the development of application logic and web pages.</p>
+        </section>
+
+        <a name="skills"></a>
+        <section id="skills" class="block skills black">
+            <h2>My Skills</h2>
+            <ul class="skills__category">
+                <li>
+                    <span>Web</span>
+                    <p>WordPress, Bootstrap,<br> Tailwind</p>
+                </li>
+                <li>
+                    <span>Frontend</span>
+                    <p>Html, Css (SASS), Js,<br> jQuery, React</p>
+                </li>
+                <li>
+                    <span>UX/UI</span>
+                    <p>Figma,<br> Photoshop</p>
+                </li>
+                <li>
+                    <span>Technologies</span>
+                    <p>BEM, Gulp, Git</p>
+                </li>
+                <li>
+                    <span>Other</span>
+                    <p>C++, Python<br> System Administration,<br> Information security</p>
+                </li>
+            </ul>
+        </section>
+
+        <a name="portfolio"></a>
+        <section id="portfolio" class="block portfolio white">
+            <div class="slider">
+                <div class="slider__container">
+                    <div class="slider__wrapper">
+                        <div class="slider__scroll">
+                            <a href="#" class="slider__control" data-slide="prev"></a>
+                            <span>Scroll</span>
+                            <a href="#" class="slider__control" data-slide="next"></a>
+                        </div>
+                        <div class="slider__items">
+                            <div class="slider__item">
+                                <h2>Portfolio</h2>
+                                <p>The pinnacle of my skills is what you are watching now</p>
+                            </div>
+                            <div class="slider__item">
+                                @@include('html/portfolio__item-1.html', {})
+                            </div>
+                            <div class="slider__item">
+                                @@include('html/portfolio__item-2.html', {})
+                            </div>
+                            <div class="slider__item">
+                                @@include('html/portfolio__item-3.html', {})
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <a name="contacts"></a>
+        <section id="contacts" class="block contacts black">
+            <h2>Contact me!</h2>
+            <ul>
+                <li>
+                    <a href="https://www.t.me/blankbuffoon" target="blank">
+                        <img src="img/icons/icons.svg#telegram" class="svg-telegram-dims" alt="telegram" />
+                        <p>@blankbuffoon</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:prod@terepin.ru">
+                        <img src="img/icons/icons.svg#message" class="svg-message-dims" alt="message" />
+                        <p>prod@terepin.ru</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/BlankBuffoon" target="_blank">
+                        <img src="img/icons/icons.svg#github" class="svg-github-dims" alt="github" />
+                        <p>github profile</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    @@include('html/footer.html', {}) @@include('html/link.html', {})
+</body>
+
+</html>

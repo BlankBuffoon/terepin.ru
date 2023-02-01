@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Shippori Antique", sans-serif;
+}
+
+@mixin clearButton {
+    border: none;
+    background: none;
+}
+
+body,
+html {
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+p,
+span {
+    font-size: 24px;
+    text-align: center;
+}
+
+.block {
+    min-height: 100vh;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &.white {
+        background: white;
+        color: black;
+    }
+    &.black {
+        background: black;
+        color: white;
+    }
+}
+
+.intro {
+    h1 {
+        font-size: 128px;
+        margin-bottom: 12px;
+        //width: 40%;
+        //text-align: center;
+    }
+    button {
+        border: 2px solid white;
+        background: none;
+        padding: 5px 20px;
+        color: white;
+        font-size: 16px;
+    }
+}
+
+.about {
+    p {
+        max-width: 80%;
+    }
+    &__photo {
+        position: relative;
+        width: 280px;
+        height: 280px;
+        border-radius: 100%;
+        overflow: hidden;
+        box-shadow: 0px 20px 34px 10px rgba(34, 60, 80, 0.14);
+        margin-bottom: 14px;
+        img {
+            transform: scale(140%);
+            position: absolute; 
+            width: 100%;
+        }
+    }
+}
+
+.slider__item:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+
+    .item-wrapper {
+        position: absolute;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 28px;
+    }
+
+    .wrapper {
+        //position: absolute;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 38px;
+
+        .left {
+            width: 45%;
+
+            img {
+                width: 100%;
+                margin-right: 40px;
+                box-shadow: -3px 10px 54px 14px rgb(34 60 80 / 15%);
+            }
+        }
+
+        .right {
+            width: 45%;
+
+            .description {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                span {
+                    font-size: 22px;
+                    margin-bottom: 8px;
+                }
+    
+                p {
+                    color: rgb(39, 39, 39);
+                    font-size: 18px;
+                    margin-bottom: 18px;
+                }
+    
+                a {
+                    border-left: 3px solid #b1006d;
+                    font-size: 20px;
+                    color: #000;
+                    text-decoration: none;
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+.skills {
+    &__category {
+        width: 65%;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        & li {
+            margin-bottom: 20px;
+
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+        & span {
+            text-align: left;
+            margin-bottom: 20px;
+            border-bottom: 3px solid white;
+        }
+        & p {
+            text-align: left;
+            margin-top: 8px;
+            font-size: 18px;
+        }
+    }
+}
+
+.contacts {
+    h2 {
+        margin-bottom: 12px;
+    }
+    ul {
+        list-style-type: none;
+        li {
+            a {
+                color: white;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                margin-bottom: 6px;
+                p {
+                    margin-left: 8px;
+                    font-size: 18px;
+                }
+                .svg-message-dims,
+                .svg-telegram-dims {
+                    width: 22px;
+                    height: 22px;
+                }
+
+                .svg-github-dims {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 0 20px;
+    &__copyright {
+        font-size: 18px;
+        &>a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    a {
+        text-align: center;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@import "navBar";
+@import "animation";
+@import "slider";
+@import "media";

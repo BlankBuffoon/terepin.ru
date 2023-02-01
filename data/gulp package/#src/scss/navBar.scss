@@ -1,0 +1,161 @@
+//nav-bar styles
+.nav-bar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  top: 0;
+  left: 5px;
+  z-index: 100;
+
+  ul {
+    list-style-type: none;
+
+    li {
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      & > a {
+        text-decoration: none;
+
+        & > span {
+          height: 25px;
+          display: flex;
+          align-items: center;
+
+          &::before {
+            margin-right: 5px;
+            display: block;
+            content: '';
+            width: 12px;
+            height: 12px;
+            border: 1px solid white;
+            border-radius: 100%;
+          }
+
+          font-size: 20px;
+          //color: white;
+        }
+      }
+    }
+  }
+
+  &.white {
+    ul li > a > span {
+      &::before {
+        border-color: white;
+      }
+
+      &::after {
+        color: white;
+      }
+    }
+  }
+
+  &.black {
+    ul li > a > span {
+      &::before {
+        border-color: black;
+      }
+
+      &::after {
+        color: black;
+      }
+    }
+  }
+}
+
+.nav-bar {
+  &.black {
+    ul li > a.active {
+      & > span::before {
+        background: black;
+      }
+    }
+  }
+
+  &.white {
+    ul li > a.active {
+      & > span::before {
+        background: white;
+      }
+    }
+  }
+}
+
+.nav-bar ul li > a > span::after {
+  display: none;
+  opacity: 0;
+}
+
+.nav-bar ul li:hover a {
+  &[data-scroll=intro] {
+    & span::after {
+      animation: sectionVisibility--open .5s;
+      content: 'Home';
+    }
+  }
+
+  &[data-scroll=about] {
+    & span::after {
+      animation: sectionVisibility--open .5s;
+      content: 'About';
+    }
+  }
+
+  &[data-scroll=skills] {
+    & span::after {
+      animation: sectionVisibility--open .5s;
+      content: 'Skills';
+    }
+  }
+
+  &[data-scroll=portfolio] {
+    & span::after {
+      animation: sectionVisibility--open .5s;
+      content: 'Portfolio';
+    }
+  }
+
+  &[data-scroll=contacts] {
+    & span::after {
+      animation: sectionVisibility--open .5s;
+      content: 'Contacts';
+    }
+  }
+}
+
+.nav-bar ul li > a > span::before, span::after {
+  transition: color .5s, border-color .5s, background .5s, opacity 1s;
+}
+
+@keyframes sectionVisibility--open {
+  from  {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes sectionVisibility--close {
+  from  {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+  }
+}

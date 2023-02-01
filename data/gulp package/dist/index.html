@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="files/chief-slider/chief-slider.css?_v=20220727053003">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220727053003">
+
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            new ChiefSlider('.slider', {
+                loop: true,
+                autoplay: false,
+                swipe: false
+            });
+        })
+    </script>
+    <title>Alex Terepin</title>
+</head>
+
+<body>
+    
+    <main>
+        <nav id="nav-bar" class="nav-bar">
+            <ul>
+                <li>
+                    <a class="nav-bar__link" data-scroll="intro" href="#intro"><span></span></a>
+                </li>
+                <li>
+                    <a class="nav-bar__link" data-scroll="about" href="#about"><span></span></a>
+                </li>
+                <li>
+                    <a class="nav-bar__link" data-scroll="skills" href="#skills"><span></span></a>
+                </li>
+                <li>
+                    <a class="nav-bar__link" data-scroll="portfolio" href="#portfolio"><span></span></a>
+                </li>
+                <li>
+                    <a class="nav-bar__link" data-scroll="contacts" href="#contacts"><span></span></a>
+                </li>
+            </ul>
+            <div class="testblock"></div>
+        </nav>
+
+        <a name="intro"></a>
+        <section id="intro" class="block intro black">
+            <h1>Hi World!</h1>
+            <button class="moreButton">Wake up, Neo</button>
+        </section>
+
+        <a name="about"></a>
+        <section id="about" class="block about white">
+            <div class="about__photo"><picture><source srcset="img/blankbuffoon_moscow.webp" type="image/webp"><img src="img/blankbuffoon_moscow.jpg" alt="It's me ;)"></picture></div>
+            <h2>About me.</h2>
+            <p>Hi! My name is Alex. I am a frontend developer.</p>
+            <p>My specialization is the layout of websites and the development of application logic and web pages.</p>
+        </section>
+
+        <a name="skills"></a>
+        <section id="skills" class="block skills black">
+            <h2>My Skills</h2>
+            <ul class="skills__category">
+                <li>
+                    <span>Web</span>
+                    <p>WordPress, Bootstrap,<br> Tailwind</p>
+                </li>
+                <li>
+                    <span>Frontend</span>
+                    <p>Html, Css (SASS), Js,<br> jQuery, React</p>
+                </li>
+                <li>
+                    <span>UX/UI</span>
+                    <p>Figma,<br> Photoshop</p>
+                </li>
+                <li>
+                    <span>Technologies</span>
+                    <p>BEM, Gulp, Git</p>
+                </li>
+                <li>
+                    <span>Other</span>
+                    <p>C++, Python<br> System Administration,<br> Information security</p>
+                </li>
+            </ul>
+        </section>
+
+        <a name="portfolio"></a>
+        <section id="portfolio" class="block portfolio white">
+            <div class="slider">
+                <div class="slider__container">
+                    <div class="slider__wrapper">
+                        <div class="slider__scroll">
+                            <a href="#" class="slider__control" data-slide="prev"></a>
+                            <span>Scroll</span>
+                            <a href="#" class="slider__control" data-slide="next"></a>
+                        </div>
+                        <div class="slider__items">
+                            <div class="slider__item">
+                                <h2>Portfolio</h2>
+                                <p>The pinnacle of my skills is what you are watching now</p>
+                            </div>
+                            <div class="slider__item">
+                                
+<div class="item-wrapper">
+    <h2>Landing Page</h2>
+    <div class="wrapper">
+        <div class="left">
+            <picture><source srcset="../img/example1.webp" type="image/webp"><img src="../img/example1.jpg" alt="example1"></picture>
+        </div>
+        <div class="right">
+            <div class="description">
+                <span>Description</span>
+                <p>
+                    Layout of the Landing page based on the layout from Figma. This is my first experience in the layout of large pages.
+                </p>
+                <a href="https://www.portfolio.terepin.ru/1/index.html" target="_blank">Preview</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                            </div>
+                            <div class="slider__item">
+                                <div class="item-wrapper">
+    <h2>Online Shop</h2>
+    <div class="wrapper">
+        <div class="left">
+            <picture><source srcset="../img/example2.webp" type="image/webp"><img src="../img/example2.jpg" alt="example2"></picture>
+        </div>
+        <div class="right">
+            <div class="description">
+                <span>Description</span>
+                <p>
+                    Layout of a large, multi-page design of an online store. I learned how to use preprocessors, semantic tags and animations. <br>
+                    The menu was developed without using JS (css only)
+                </p>
+                <a href="https://www.portfolio.terepin.ru/2/index.html" target="_blank">Preview</a>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                            <div class="slider__item">
+                                <div class="item-wrapper">
+    <h2>Landing Page</h2>
+    <div class="wrapper">
+        <div class="left">
+            <picture><source srcset="../img/example3.webp" type="image/webp"><img src="../img/example3.jpg" alt="example3"></picture>
+        </div>
+        <div class="right">
+            <div class="description">
+                <span>Description</span>
+                <p>
+                    The first independent project. The design was developed independently in Figma. Animations, various multi-layered designs were used, a mobile version was made. The site used video materials, as well as feedback forms.
+                </p>
+                <a href="https://www.portfolio.terepin.ru/3/index.html" target="_blank">Preview</a>
+            </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <a name="contacts"></a>
+        <section id="contacts" class="block contacts black">
+            <h2>Contact me!</h2>
+            <ul>
+                <li>
+                    <a href="https://www.t.me/blankbuffoon" target="blank">
+                        <img src="img/icons/icons.svg#telegram" class="svg-telegram-dims" alt="telegram" />
+                        <p>@blankbuffoon</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:prod@terepin.ru">
+                        <img src="img/icons/icons.svg#message" class="svg-message-dims" alt="message" />
+                        <p>prod@terepin.ru</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/BlankBuffoon" target="_blank">
+                        <img src="img/icons/icons.svg#github" class="svg-github-dims" alt="github" />
+                        <p>github profile</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <footer class="block footer white">
+    <p class="footer__copyright">Copyright &copy; <br>
+        <a href="http://terepin.ru">terepin.ru</a> 
+        2021 - 2022</p>
+        <a href="https://www.youtube.com/watch?v=PCabgU8T3c8&ab_channel=bluesub"><em>You do not truly know someone until you fight them.</em></a>
+</footer> <script defer src="js/app.min.js?_v=20220727053003"></script>
+<script defer src="files/chief-slider/chief-slider.js?_v=20220727053003"></script>
+</body>
+
+</html>
